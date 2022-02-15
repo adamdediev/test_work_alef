@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue@2"></script>
+  <link rel="stylesheet" href="asset/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <img src="asset/img/Frame 10.png" alt="">
+            <div class="container">
+                <div class="menu">
+                    <ul>
+                        <li>Форма</li>
+                        <li>Превью</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <section>
+    <div class="container">
+        <div class="section_title">Персональные данные</div>
+        <div class="input_name person input"><span>Имя</span><input type="text"></div>
+        <div class="input_old_years person input"><span>Возраст</span><input type="text"></div>
+    </div>
+    </section>
+    <section>
+        <div class="container"  id="app" >
+            <div class="section_title_button">
+                <div class="section_title">Дети (макс. 5)</div>
+                <div class="button" @click="add"><img src="asset/img/plus.png" alt=""><button>Добавить ребенка</button></div>
+                
+            </div>
+            <div class="input_box_flex"></div>
+                <div class="input_box">
+                    <div class="input_name input"><span>Имя</span><input type="text"></div>
+                    <div class="input_old_years input"><span>Возраст</span><input type="text"></div>
+                    <div class="delete"><span>Удалить</span></div>
+                </div>
+                <div class="input_box">
+                    <div class="input_name input"><span>Имя</span><input type="text"></div>
+                    <div class="input_old_years input"><span>Возраст</span><input type="text"></div>
+                    <div class="delete"><span>Удалить</span></div>
+                </div>
+                <div v-for="component in arr"> {{ component }} </div>
+
+            </div>
+            
+        </div>
+    </section>
+    <aside>
+        <div class="container"><button class="Pre_footer" >Сохранить</button></div>
+    </aside>
+    <footer>
+        <div class="foter_position">
+        <div class="footer_title" id="app"><span>all rights reserved</span></div>
+    </div>
+    </footer>
+
+  <script src="asset/index.vue"></script>
+</body>
+</html>
